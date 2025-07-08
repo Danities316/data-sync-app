@@ -2,7 +2,7 @@
 database:
   dsn: "MyMySQLTestDSN"
   user: "root"
-  password: "35545177"
+  password: "my password"
 
 queries:
   - name: "fetchUsers"
