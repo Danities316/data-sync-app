@@ -1,0 +1,22 @@
+
+database:
+  dsn: "MyMySQLTestDSN"
+  user: "root"
+  password: "35545177"
+
+queries:
+  - name: "fetchUsers"
+    sql: "SELECT * FROM users WHERE updatedAt > :lastRun"
+    output: "output/users.csv"
+    apiEndpoint: "https://webhook.site/840fb756-b618-4845-9f18-3a7904550f87"
+
+api:
+  key: "YOUR_API_KEY"
+
+schedule:
+  # Run every day at 2:00 AM.
+  # cron: "0 2 * * *"
+  cron: "* * * * *"
+
+timestamps:
+  storage: "./lastRunTimestamps.json"
